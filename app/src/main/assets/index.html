@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <title>পবিত্র ত্রিপিটক</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tripitaka">
+    <meta name="keywords" content="Tripitaka, buddha, bangla tripitaka">
+    <meta name="author" content="Joytu Khisha">
+    <meta name="update" content="Sīlavanta Bhikkhu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="0; url=p3/d1.html" /> -->
+    <link rel="stylesheet" href="iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiperConfig.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/w3-colors-win8.css">
+    <script src="./lib/dom/makedom.js"></script>
+
+    <script>
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FF00');
+    </script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body class='body-theme1 bg-shade1'>
+    <header id="head" class='legend-shade1'>
+        <img id="appLogo" src="img/logo.png">
+        <a onclick='showHomeContent()'> পবিত্র ত্রিপিটক </a>
+        <i onclick="hideNavsnModals();openNav('rightNav','right');" class="material-icons">menu</i>
+        <i id='leftNavButton' onclick="closeNav('rightNav','right');openNav('leftNav','left');"
+            class="material-icons">library_books</i>
+    </header>
+    <div id="booknameDiv" style="display:block">
+        <p id="bookname"><b></b></p>
+    </div>
+    <div id="homeContent">
+        <div id="tptList" class="bg-shade1">
+            <ul>
+                <li id="binoy_button"><i class="material-icons">folder_open</i>বিনয়পিটক</li>
+                <div>
+                    <ul id="binoy_list" class='bg-shade2'>
+                        <li onclick="showBook('p1/1.html')"><a><i class="material-icons">book</i>পারাজিকা</a></li>
+                        <li onclick="showBook('p1/2.html')"><a><i class="material-icons">book</i>পাচিত্তিয়</a></li>
+                        <li onclick="showBook('p1/3.html');"><a><i class="material-icons">book</i>ভিক্ষুণী-বিভঙ্গ</a>
+                        </li>
+                        <li onclick="showBook('p1/4.html');"><a><i class="material-icons">book</i>মহাবর্গ</a></li>
+                        <li onclick="showBook('p1/5.html')"><a><i class="material-icons">book</i>চূলবর্গ</a></li>
+                        <li onclick="showBook('p1/6.html')"><a><i class="material-icons">book</i>পরিবার</a></li>
+                    </ul>
+                </div>
+                <!-- sutrapitak list -->
+                <li id="sutro_button"><i class="material-icons">folder_open</i>সূত্রপিটক</li>
+                <div>
+                    <ul id="sutro_list" class='bg-shade2'>
+                        <li id="dirgha_button"><i class="material-icons">folder_open</i>দীর্ঘনিকায়</li>
+                        <div>
+                            <ul id="dirgha_list" class='bg-shade3'>
+                                <li onclick="showBook('p2/1.html')"><a><i
+                                            class="material-icons">book</i>শীলস্কন্ধ-বর্গ</a></li>
+                                <li onclick="showBook('p2/2.html')"><a><i class="material-icons">book</i>মহাবর্গ</a>
+                                </li>
+                                <li onclick="showBook('p2/3.html')"><a><i class="material-icons">book</i>পাথিক-বর্গ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <li id="modhyom_button"><i class="material-icons">folder_open</i>মধ্যমনিকায়</li>
+                        <div>
+                            <ul id="modhyom_list" class='bg-shade3'>
+                                <li onclick="showBook('p2/4.html')"><a><i class="material-icons">book</i>মূল-পঞ্চাশ</a>
+                                </li>
+                                <li onclick="showBook('p2/5.html')"><a><i
+                                            class="material-icons">book</i>মধ্যম-পঞ্চাশ</a></li>
+                                <li onclick="showBook('p2/6.html')"><a><i class="material-icons">book</i>উপরি-পঞ্চাশ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <li id="songjukto_button"><i class="material-icons">folder_open</i>সংযুক্তনিকায়</li>
+                        <div>
+                            <ul id="songjukto_list" class='bg-shade3'>
+                                <li onclick="showBook('p2/7.html')"><a><i class="material-icons">book</i>সগাথা-বর্গ</a>
+                                </li>
+                                <li onclick="showBook('p2/8.html')"><a><i class="material-icons">book</i>নিদান-বর্গ</a>
+                                </li>
+                                <li onclick="showBook('p2/9.html')"><a><i class="material-icons">book</i>স্কন্ধ-বর্গ</a>
+                                </li>
+                                <li onclick="showBook('p2/10.html')"><a><i
+                                            class="material-icons">book</i>ষড়ায়তন-বর্গ</a></li>
+                                <li onclick="showBook('p2/11.html')"><a><i class="material-icons">book</i>মহাবর্গ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <li id="anguttor_button"><i class="material-icons">folder_open</i>অঙ্গুত্তরনিকায়</li>
+                        <div>
+                            <ul id="anguttor_list" class='bg-shade3'>
+                                <li onclick="showBook('p2/12.html')"><a><i class="material-icons">book</i>একক নিপাত</a>
+                                </li>
+                                <li onclick="showBook('p2/13.html')"><a><i class="material-icons">book</i>দ্বিক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/14.html')"><a><i class="material-icons">book</i>ত্রিক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/15.html')"><a><i class="material-icons">book</i>চতুষ্ক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/16.html')"><a><i class="material-icons">book</i>পঞ্চক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/17.html')"><a><i class="material-icons">book</i>ষষ্ঠক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/18.html')"><a><i class="material-icons">book</i>সপ্তক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/19.html')"><a><i class="material-icons">book</i>অষ্টক
+                                        নিপাত</a></li>
+                                <li onclick="showBook('p2/20.html')"><a><i class="material-icons">book</i>নবক নিপাত</a>
+                                </li>
+                                <li onclick="showBook('p2/21.html')"><a><i class="material-icons">book</i>দশক নিপাত</a>
+                                </li>
+                                <li onclick="showBook('p2/22.html')"><a><i class="material-icons">book</i>একাদশক
+                                        নিপাত</a></li>
+                            </ul>
+                        </div>
+
+                        <li id="khuddok_button"><i class="material-icons">folder_open</i>খুদ্দকনিকায়</li>
+                        <div>
+                            <ul id="khuddok_list" class='bg-shade3'>
+                                <li onclick="showBook('p2/23.html')"><a><i class="material-icons">book</i>খুদ্দকপাঠ</a>
+                                </li>
+                                <li onclick="showBook('p2/24.html')"><a><i class="material-icons">book</i>ধর্মপদ</a>
+                                </li>
+                                <li onclick="showBook('p2/25.html')"><a><i class="material-icons">book</i>উদান</a></li>
+                                <li onclick="showBook('p2/26.html')"><a><i class="material-icons">book</i>ইতিবুত্তক</a>
+                                </li>
+                                <li onclick="showBook('p2/27.html')"><a><i class="material-icons">book</i>সূত্রনিপাত</a>
+                                </li>
+                                <li onclick="showBook('p2/28.html')"><a><i
+                                            class="material-icons">book</i>বিমানকাহিনি</a></li>
+                                <li onclick="showBook('p2/29.html')"><a><i
+                                            class="material-icons">book</i>প্রেতকাহিনি</a></li>
+                                <li onclick="showBook('p2/30.html')"><a><i class="material-icons">book</i>থেরগাথা</a>
+                                </li>
+                                <li onclick="showBook('p2/31.html')"><a><i class="material-icons">book</i>থেরীগাথা</a>
+                                </li>
+                                <li onclick="showBook('p2/32.html')"><a><i class="material-icons">book</i>অপদান (১ম
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/33.html')"><a><i class="material-icons">book</i>অপদান (২য়
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/34.html')"><a><i class="material-icons">book</i>বুদ্ধবংশ</a>
+                                </li>
+                                <li onclick="showBook('p2/35.html')"><a><i class="material-icons">book</i>চরিয়াপিটক</a>
+                                </li>
+                                <li onclick="showBook('p2/36.html')"><a><i class="material-icons">book</i>জাতক (১ম
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/37.html')"><a><i class="material-icons">book</i>জাতক (২য়
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/38.html')"><a><i class="material-icons">book</i>জাতক (৩য়
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/39.html')"><a><i class="material-icons">book</i>জাতক (৪র্থ
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/40.html')"><a><i class="material-icons">book</i>জাতক (৫ম
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/41.html')"><a><i class="material-icons">book</i>জাতক (৬ষ্ঠ
+                                        খণ্ড)</a></li>
+                                <li onclick="showBook('p2/42.html')"><a><i class="material-icons">book</i>মহানির্দেশ</a>
+                                </li>
+                                <li onclick="showBook('p2/43.html')"><a><i class="material-icons">book</i>চূলনির্দেশ</a>
+                                </li>
+                                <li onclick="showBook('p2/44.html')"><a><i
+                                            class="material-icons">book</i>প্রতিসম্ভিদামার্গ</a></li>
+                                <li onclick="showBook('p2/45.html')"><a><i
+                                            class="material-icons">book</i>মিলিন্দ-প্রশ্ন</a></li>
+                                <li onclick="showBook('p2/46.html')"><a><i
+                                            class="material-icons">book</i>নেত্তিপ্রকরণ</a></li>
+                                <li onclick="showBook('p2/47.html')"><a><i class="material-icons">book</i>পিটকোপদেশ</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <!-- avidharma pitak list -->
+                <li id="avidharma_button"><i class="material-icons">folder_open</i>অভিধর্মপিটক</li>
+                <div>
+                    <ul id="avidharma_list" class='bg-shade2'>
+                        <li onclick="showBook('p3/1.html')"><a><i class="material-icons">book</i>ধর্মসঙ্গণী</a></li>
+                        <li onclick="showBook('p3/2.html')"><a><i class="material-icons">book</i>বিভঙ্গ</a></li>
+                        <li onclick="showBook('p3/3.html')"><a><i class="material-icons">book</i>ধাতুকথা</a></li>
+                        <li onclick="showBook('p3/4.html')"><a><i class="material-icons">book</i>পুদ্গল প্রজ্ঞপ্তি</a>
+                        </li>
+                        <li onclick="showBook('p3/5.html')"><a><i class="material-icons">book</i>কথাবত্থু</a></li>
+                        <li onclick="showBook('p3/6.html')"><a><i class="material-icons">book</i>যমক (১ম খণ্ড)</a></li>
+                        <li onclick="showBook('p3/7.html')"><a><i class="material-icons">book</i>যমক (২য় খণ্ড)</a></li>
+                        <li onclick="showBook('p3/8.html')"><a><i class="material-icons">book</i>যমক (৩য় খণ্ড)</a></li>
+                        <li onclick="showBook('p3/9.html')"><a><i class="material-icons">book</i>পট্ঠান (১ম খণ্ড)</a>
+                        </li>
+                        <li onclick="showBook('p3/10.html')"><a><i class="material-icons">book</i>পট্ঠান (২য় খণ্ড)</a>
+                        </li>
+                        <li onclick="showBook('p3/11.html')"><a><i class="material-icons">book</i>পট্ঠান (৩য় খণ্ড)</a>
+                        </li>
+                        <li onclick="showBook('p3/12.html')"><a><i class="material-icons">book</i>পট্ঠান (৪র্থ খণ্ড)</a>
+                        </li>
+                        <li onclick="showBook('p3/13.html')"><a><i class="material-icons">book</i>পট্ঠান (৫ম খণ্ড)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <li id="onnanno_button"> <i class="material-icons">folder_open</i>অন্যান্য বই </li>
+                <div>
+                    <ul id="onnanno_list" class='bg-shade2'>
+                        <li id="deshona_button"><i class="material-icons left-icon">folder_open</i><span>আর্যশ্রাবক
+                                বনভন্তের ধর্মদেশনা (সিরিজ)</span></li>
+                        <div>
+                            <ul id="deshona_list" class='bg-shade3'>
+                                <li onclick="showBook('p4/1.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-১)</span></a></li>
+                                <li onclick="showBook('p4/2.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-২)</span></a></li>
+                                <li onclick="showBook('p4/3.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৩)</span></a></li>
+                                <li onclick="showBook('p4/4.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৪)</span></a></li>
+                                <li onclick="showBook('p4/5.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৫)</span></a></li>
+                                <li onclick="showBook('p4/6.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৬)</span></a></li>
+                                <li onclick="showBook('p4/7.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৭)</span></a></li>
+                                <li onclick="showBook('p4/8.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৮)</span></a></li>
+                                <li onclick="showBook('p4/9.html')"><a><i
+                                            class="material-icons left-icon">book</i><span>আর্যশ্রাবক বনভন্তের ধর্মদেশনা
+                                            (সিরিজ-৯)</span></a></li>
+                            </ul>
+                        </div>
+                        <li onclick="showBook('p4/10.html')"><a><i class="material-icons">book</i>শ্রাবকবুদ্ধ
+                                বনভন্তে</a></li>
+                        <li onclick="showBook('p4/11.html')"><a><i class="material-icons">book</i>বিশুদ্ধিমার্গ</a></li>
+                        <li onclick="showBook('p4/12.html')"><a><i class="material-icons">book</i>বিমুক্তিমার্গ</a></li>
+                        <li onclick="showBook('p4/13.html')"><a><i class="material-icons">book</i>ধর্মপদ-অর্থকথা
+                                (সমগ্র)</a></li>
+                        <li onclick="showBook('p4/14.html')"><a><i class="material-icons left-icon">book</i><span>বৌদ্ধ
+                                    ভিক্ষু বিধি (১ম খণ্ড)</span></a></li>
+                        <li onclick="showBook('p4/15.html')"><a><i class="material-icons left-icon">book</i><span>বৌদ্ধ
+                                    ভিক্ষু বিধি (২য় খণ্ড)</span></a></li>
+                        <li onclick="showBook('p4/16.html')"><a><i class="material-icons">book</i>জানা ও দেখা</a></li>
+                        <li onclick="showBook('p4/17.html')"><a><i class="material-icons  left-icon">book</i>হৃদয়ের দরজা
+                                খুলে দিন</span></a></li>
+                        <li onclick="showBook('p4/18.html')"><a><i class="material-icons">book</i>কেবল ভালো হোন</a></li>
+                        <li onclick="showBook('p4/19.html')"><a><i class="material-icons">book</i>একটি বন্য গাছ</a></li>
+                        <li onclick="showBook('p4/20.html')"><a><i
+                                    class="material-icons ">book</i>পট্ঠানুদ্দেশ-দীপনী</a></li>
+                        <li onclick="showBook('p4/21.html')"><a><i class="material-icons ">book</i>ভালো? মন্দ? কে
+                                জানে?</a></li>
+                        <li onclick="showBook('p4/22.html')"><a><i class="material-icons ">book</i>মৃত্যুতে
+                                পুনর্জন্ম</a></li>
+                        <li onclick="showBook('p4/23.html')"><a><i class="material-icons ">book</i>কুশল প্রশ্নোত্তর</a>
+                        </li>
+                        <li onclick="showBook('p4/24.html')"><a><i class="material-icons ">book</i>মহামানব গৌতম
+                                বুদ্ধ</a></li>
+                        <li onclick="showBook('p4/25.html')"><a><i class="material-icons ">book</i>পরিত্রাণ সূত্র
+                                পঞ্চাশক</a></li>
+                    </ul>
+                </div>
+            </ul>
+
+        </div>
+        <div id="footer">
+            <img id="tpsLogo" src="img/TPS Logo.png">
+            <div>
+                <h3 style="font-size:150%">ত্রিপিটক পাবলিশিং সোসাইটি</h3>
+                <p style="font-size:140%">বাংলাদেশ</p>
+
+            </div>
+        </div>
+    </div>
+    <div id="rightNav" class='bg-shade2'>
+        <div id="rightNavHead" class='bg-shade3'>
+            <!-- <span id="closebtn" style="float:left" onclick="closeNav('rightNav','right')">&times;</span> -->
+            <img src="img/logo.png" alt="T">
+        </div>
+        <ul>
+            <li onclick="showHomeContent()">
+                <img src="img/logo.png" style="width:60px;"><span>মূল পাতা</span>
+            </li>
+            <li onclick="closeNav('rightNav','right');openNav('searchPage','left');">
+                <i class="material-icons">search</i><span>খোঁজ সাহায্য</span>
+            </li>
+            <li onclick="openModal('fontModal')">
+                <i class="material-icons">format_size</i><span>ফন্ট সাইজ</span>
+            </li>
+            <li onclick="openBookmarkPage()">
+                <i class="material-icons">bookmark_border</i><span>বুকমার্ক</span>
+            </li>
+            <li onclick=" openNoteNav();">
+                <i class="material-icons">note</i><span>নোট সমগ্র</span>
+            </li>
+            <li onclick="openModal('themeModal')">
+                <i class="material-icons">style</i><span>থিম নির্ধারণ</span>
+            </li>
+            <li onclick="closeNav('rightNav','right');openNav('seekhelp','left');">
+                <i class="material-icons">help_outline</i><span>সাহায্য নিন</span>
+            </li>
+            <li onclick="closeNav('rightNav','right');openNav('ourinfo','left');">
+                <i class="material-icons">person</i><span>আমাদের সম্পর্কে</span>
+            </li>
+            <li onclick="closeNav('rightNav','right');openNav('ourinfo','update');">
+                <i class="material-icons">update</i><span>চেক আপডেট </span>
+            </li>
+            <li onclick="closeNav('rightNav','right');openNav('ourinfo','share');">
+                <i class="material-icons">share</i><span>ভাগাভাগি করুন</span>
+            </li>
+            <li onclick="closeNav('rightNav','right');openNav('ourinfo','rate');">
+                <i class="material-icons">rate_review</i><span>আপভোট দিন</span>
+            </li>
+        </ul>
+    </div>
+
+    <div id='leftNav' class='bg-shade2'>
+        <div id="leftNavHead" class='legend-shade2'>
+            <span id="toct">
+                <h3>সূচিপত্র</h3>
+            </span>
+        </div>
+        <div id='leftNavBody' class='bg-shade2'></div>
+    </div>
+    <div id='viewport' class='viewport-theme1' style='display:none;'>
+        <p></p>
+    </div>
+    <div id='seekhelp' class='bg-shade2'>
+        <h3>মূল পাতা পরিচিতি</h3>
+        <p>অ্যাপটি খোলার পরপরই মূলপাতায় রয়েছে ৩টি পিটক ও অন্যান্য বইয়ের সূচি। যেখান থেকে আপনার পছন্দের বইটি খুলতে
+            পারবেন। মূল পাতার উপর ডান পাশে রয়েছে ম্যানু বাটন। যা চাপ দেওয়ার মাধ্যমে ম্যানু বারটি আসবে। </p>
+        <img src="img/mainpage.jpg">
+
+        <h3>ম্যানু বাটন</h3>
+        <p>ম্যানু বার থেকে আপনি খোঁজ সাহায্য, ফন্ট সাইজ, বুকমার্ক, নোট সমগ্র, থিম নির্ধারন ইত্যাদি সুবিধা নিতে পারবেন।
+            ফন্ট সাইজ বাটনটি চাপ দেওয়ার মাধ্যমে আপনি যে বইটি পড়বেন তার ফন্ট পরিবর্তন করার সুযোগ পাবেন। থিম নির্ধারন
+            বাটনটি চাপ দিলে আপনার পছন্দের থিম নির্ধারনের সুযোগ পাবেন</p>
+        <img src="img/menu.jpg">
+        <img src="img/theme.jpg">
+
+        <h3>খোঁজ সাহায্য</h3>
+        <p>ম্যানু বারের খোঁজ সাহায্য বাটনটি চাপ দিলে খোঁজ সাহায্যের বারটি বেরিয়ে আসবে। যেখান থেকে আপনি সমগ্র ত্রিপিটকের
+            নির্দিষ্ট পিটক সমগ্র ধরে যেকোনো শব্দ খোঁজ করতে পারবেন অথবা আপনি সমগ্র পিটকের যেকোনো নির্দিষ্ট বইয়ে খোঁজ করতে
+            পারবেন। খোঁজ চলাকালীন যা খুঁজতে চাচ্ছেন তা পেয়ে গেলে খোঁজ বন্ধ করতে পারবেন। খোঁজ ফলাফলের যেকোনো ১টায় চাপ
+            দিলে নির্দিষ্ট বইয়ের নির্দিষ্ট খোঁজে আপনাকে পৌঁছে দেওয়া হবে।</p>
+        <img src="img/search.jpg">
+
+        <h3>বুকমার্ক ও নোট সমগ্র</h3>
+        <p>ম্যানু বারের বুকমার্ক বাটনটি চাপ দিলে বুকমার্ক বারটি বেরিয়ে আসবে যেখানে আপনার করা বুকমার্ক সমগ্র বার বেরিয়ে
+            আসবে। বুকমার্কের যেকোনো ১টায় চাপ দিলে নির্দিষ্ট বইয়ের নির্দিষ্ট বুকমার্কে আপনাকে পৌঁছে দেওয়া হবে। ম্যানু
+            বারের নোট সমগ্র বাটনটি চাপ দিলে নোট সমগ্রের বারটি বেরিয়ে আসবে। নোট সমগ্রের যেকোনোটি চাপ দিলে আপনি আপনার করা
+            নোটটি দেখতে পারবেন। প্রয়োজনে আপনি তা পরিবর্তনও করতে পারবেন।</p>
+        <img src="img/bookmark.jpg">
+        <img src="img/note.jpg">
+
+        <h3>বইগুলোর ব্যবহারপদ্ধতি</h3>
+        <p>প্রত্যেক বই খোলার পর বইয়ের উপর ডান পাশে দুটি বাটন থাকবে। ১টি হচ্ছে ম্যানু বাটন, অন্যটি হচ্ছে সূচিপত্র বাটন।
+            বইয়ের যে অংশে টীকা রয়েছে সেটি হাইলাইট করা থাকবে যার উপর চাপ দিয়ে আপনি টীকাটি দেখতে পারবেন। বইয়ের নীচে ডান
+            পাশে থাকছে ১টি 'ফাংশনাল' বাটন যা থেকে বইয়ের ভিতর খোঁজ, নোট ও বুকমার্ক করতে পারবেন। </p>
+        <img src="img/bookpage.jpg">
+
+        <h3>বইয়ের সূচিপত্র</h3>
+        <p>বইয়ের সূচিপত্র বার থেকে যেকোনো সূচিতে চাপ দিলে বইয়ের নির্দিষ্ট স্থানে পৌঁছে দেওয়া হবে। আপনি বইয়ের যে স্থানে
+            থাকবেন তার শিরনামটি সূচিপত্রে নীল রঙে হাইলাইট করা থাকবে।</p>
+        <!-- <img src="">                -->
+
+        <h3>'ফাংশনাল' বাটন</h3>
+        <p>বইয়ের নীচে ডান পাশে 'ফাংশনাল' বাটনটি চেপে ধরে থাকলে তিনটি বাটন বেরিয়ে আসবে। সবচেয়ে উপরেরটি হচ্ছে বুকমার্ক
+            বাটন, তার পরেরটি হচ্ছে এই বইয়ে শব্দ খোঁজার বাটন, সবচেয়ে নীচে হচ্ছে নোট করার বাটন। আপনি যে সুবিধাটি পেতে চান
+            'ফাংশনাল' বাটনটি চেপে ধরে থেকে টেনে আপনার পছন্দমতো বাটনটিতে নিয়ে যান। বাটনটি জ্বলে উঠলে ছেড়ে দিন। </p>
+        <img src="img/power.jpg">
+        <img src="img/bookmarkP.jpg">
+        <br><br>
+        <!-- <h2></h2>
+        <p></p>
+        <img src="">
+         -->
+    </div>
+    <div id='ourinfo' class='bg-shade2'>
+        <h3>আমাদের সম্পর্কে</h3>
+        <p>ত্রিপিটক পাবলিশিং সোসাইটি (ত্রিপাসো) একটি বুদ্ধধর্মীয় প্রকাশনা সংস্থা। এটি প্রতিষ্ঠিত হয় ১৪ সেপ্টেম্বর ২০১২
+            সালে খাগড়াছড়িতে। প্রতিষ্ঠার মাত্র পাঁচ বছরের মাথায় ২০১৭ সালের ২৫ আগস্ট ত্রিপাসো-এর পক্ষে বাংলার বৌদ্ধ
+            ইতিহাসে প্রথমবারের মতো বাংলায় সমগ্র ত্রিপিটক (২৫ খণ্ড) প্রকাশের গৌরবময় ও ঐতিহাসিক অর্জন সম্ভব হয়েছে। এর আগে
+            ২০১৩ সালে প্রতিষ্ঠার মাত্র এক বছরের মাথায় বাংলার বৌদ্ধ ইতিহাসে ত্রিপাসো-ই বঙ্গাক্ষরে পালি ভাষায় প্রথম
+            পূর্ণাঙ্গ পালি ত্রিপিটক (৪৬ খণ্ড) প্রকাশ করতে সক্ষম হয়েছিল। এবং ২০১৭ সালে পূর্ণাঙ্গ বাংলা ত্রিপিটক প্রকাশের
+            মাস চারেক পর ত্রিপাসো ২০১৮ সালের জানুয়ারি মাসে বাংলার বৌদ্ধ ইতিহাসে প্রথমবারের মতো পালি ভাষায় বঙ্গাক্ষরে
+            পূর্ণাঙ্গ পালি অট্ঠকথা সেটও (৪৭ খণ্ড) প্রকাশ করতে সক্ষম হয়।</p>
+        <p>এদেশের বাংলাভাষী বৌদ্ধরা যাতে একদম বিনামূল্যে পবিত্র ত্রিপিটকের বুদ্ধবাণীগুলো পড়তে পারেন সেই লক্ষ্যে ২০১৮
+            সালের শুরুর দিকে একটি পূর্ণাঙ্গ ত্রিপিটকের এন্ড্রয়েড অ্যাপস তৈরির উদ্যোগ গ্রহণ করা হয়। একই বছরের অক্টোবর
+            মাসের মাঝামাঝি নাগাদ অ্যাপস তৈরির যাবতীয় কাজ শেষ হলেও তার কয়েক মাস পর ২০১৯ সালে পূজ্য বনভন্তের শততম জন্মদিনে
+            জন্মদিনের অমূল্য উপহার হিসেবে এদেশের বৌদ্ধদের উপহার দেওয়ার সিদ্ধান্ত গৃহীত হয় এবং সেদিনই সেটি আনুষ্ঠানিকভাবে
+            উদ্বোধন ও গুগল প্লে স্টোরে (Google Play Store) ছাড়া হয়। এটিও একটি ঐতিহাসিক ঘটনা। কারণ অন্য দেশে অন্য ভাষায়
+            পবিত্র ত্রিপিটকের এন্ড্রয়েড অ্যাপস থাকলেও বাংলায় ইতিপূর্বে ছিল না। অ্যাপসটি তৈরিতে প্রোগ্রামার ও ডেভেলপার
+            হিসেবে কাজ করেন পেট্রোলিয়াম ইঞ্জিনিয়ার বাবু পুলক জীবন খীশা ও শ্রীমতি সুমিত্রা চাকমার সুযোগ্য পুত্র কম্পিউটার
+            ইঞ্জিনিয়ার জয়তু খীশা (joytukhisha@gmail.com) এবং সম্পাদনা, প্রুফ রিডিং ও টেক্সট প্রিপারেশনের কাজ করেন শ্রীমৎ
+            করুণাবংশ ভিক্ষু (kbangsharg@gmail.com)। এত বড়ো মহান একটি কাজে এই দুজন ব্যক্তির অবদানই সবচেয়ে বেশি
+            স্মরণযোগ্য। তাদের দুজনের অক্লান্ত পরিশ্রমের ফলেই এমন একটি পরিশ্রমসাধ্য কাজ সফলতার সঙ্গে শেষ করা সম্ভব হয়েছে।
+            ত্রিপিটকের বইগুলো সম্পাদনার ক্ষেত্রে কিছুটা ভিন্নতা আনা হয়েছে। মহাবর্গ, দীর্ঘনিকায়, সূত্রনিপাত, থেরগাথা,
+            থেরীগাথা, বুদ্ধবংশ, চরিয়াপিটক, বিমানকাহিনি, প্রেতকাহিনিসহ বেশ কিছু বইয়ে ষষ্ঠ সঙ্গীতি অনুসারে অনুচ্ছেদগুলোর
+            ক্রমিক নাম্বার যোগ করে দেওয়া হয়েছে যাতে করে পাঠকদের যেকোনো তথ্য চট করে খুঁজে পেতে সহজতর হয়। ষষ্ঠ সঙ্গীতির
+            মূল ত্রিপিটককে অনুসরণ করে বিমানকাহিনি, প্রেতকাহিনি, অপদান, দীর্ঘনিকায়, থেরগাথা, থেরীগাথাসহ বেশ কিছু বইয়ে
+            পূর্বাভাষ, অর্থকথা হতে সংগৃহীত কাহিনি প্রভৃতি কিছু কিছু বাদ দেওয়া হয়েছে। সব বইয়ের ভূমিকা, প্রকাশকের কথা,
+            সম্পাদক বা অনুবাদকের কথা, এগুলোও বাদ দেওয়া হয়েছে। বইগুলোর নামকরণ ও সাজানোর ক্ষেত্রেও ষষ্ঠ সঙ্গীতির বইগুলোকে
+            অনুসরণ করা হয়েছে। যেমন, দীর্ঘনিকায় ও সংযুক্তনিকায়ের বইগুলোকে খণ্ড অনুসারে না সাজিয়ে বর্গ অনুসারে সাজানো
+            হয়েছে। মধ্যমনিকায়ের বইগুলোকে পঞ্চাশক অনুসারে সাজানো হয়েছে। অঙ্গুত্তরনিকায়ের বইগুলোকে নিপাত অনুসারে সাজানো
+            হয়েছে। খুদ্দকনিকায়ের কিছু কিছু বইয়েও এই ধরনের টুকটাক পরিবর্তন আনা হয়েছে। তবে জাতকের বইগুলোকে ষষ্ঠ সঙ্গীতি
+            অনুসারে না সাজিয়ে বাংলায় প্রকাশিত শ্রেণিবিন্যাসকেই অনুসরণ করা হয়েছে। আশা করি, এ ধরনের ছোটখাটো পরিবর্তন
+            পাঠকদের অসুবিধায় না ফেলে, বরং কিছুটা হলেও সুবিধা দেবে। বইগুলো প্রুফ রিডিং-এর কাজে অনেকেই একটু-আধটু
+            সাহায্য-সহযোগিতা করেছেন তাদের সকলের প্রতিই আন্তরিক কৃতজ্ঞতা রইল।</p>
+        <p style='text-align: center'>চিরং তিট্ঠতু বুদ্ধসাসনং!</p>
+
+        <br><br>
+    </div>
+    <div id='ftnDiv' style='display:none'> </div>
+    <div id="powerDiv" style="display:none">
+        <div id="bookmark" class="power">
+            <i class="material-icons">star_border</i>
+        </div>
+        <div id="discussion" class="power">
+            <i class="material-icons">note_add</i>
+        </div>
+        <div id="search" class="power">
+            <i class="material-icons">search</i>
+        </div>
+        <!-- <div id="cog" ontouchmove="panning()" ontouchstart="activatePower()" ontouchend="inactivePower()"  class="power">
+            <i class="material-icons" >settings</i>
+        </div>  -->
+        <div id="cog" class="power">
+            <i class="material-icons">settings</i>
+        </div>
+    </div>
+    <div id="fontModal" class='bg-shade2'>
+        <h3 id='fontHeader' class='legend-shade2'>ফন্ট পরিবর্তন</h3>
+        <div>
+            <i id='minus' class="material-icons">remove_circle_outline</i>
+            <span id='fontSize'>24</span>
+            <i id='plus' class="material-icons">add_circle_outline</i>
+        </div>
+        <button class='legend-shade2'>পরিবর্তন করুন</button>
+
+    </div>
+    <div id="tikaModal" class='bg-shade2'>
+        <h3 id='tikaheader' class='legend-shade2'>টীকা</h3>
+        <p id='tikabody'>This is tika body </p>
+    </div>
+    <div id="noteModal" class='bg-shade2'>
+        <input type="text" id='noteModalTitle' placeholder="Title">
+        <textarea placeholder="Text here"></textarea>
+        <button class='legend-shade2'>নোট করুন</button>
+    </div>
+    <div id="modifyNoteModal" class='bg-shade2'>
+        <input type="text" id='modifyNoteModalTitle'>
+        <textarea placeholder="Text here"></textarea>
+        <button class='legend-shade2'>নোট পরিবর্তন করুন</button>
+    </div>
+    <div id='noteLeftNav' class='bg-shade2'>
+        <h3 class='legend-shade2'>নোট সমগ্র</h3>
+        <div id='noteNavBody'>
+            <ul>
+            </ul>
+        </div>
+
+    </div>
+    <div id="bkmrkModal" class='bg-shade2'>
+        <h3 id='bkmrkHeader' class='legend-shade2'>বুকমার্ক করা হয়েছে</h3>
+        <p id='bkmrkBody'>Bookmark </p>
+    </div>
+    <div id="bookmarkPage" class='bg-shade2'>
+        <!-- <div id="bookmarkHead" class='legend-shade2'>
+            <p id="bkmkt" >বুকমার্ক</p>
+        </div> -->
+        <h3 class='legend-shade2'>বুকমার্ক</h3>
+        <div id="bookmarkBody">
+            <ul>
+                <li>
+                    <p onclick="alert('hello')">বুকমার্ক </p>
+                    <span><i class="material-icons">delete</i></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id='themeModal' class='bg-shade2'>
+        <h3 id='themeHeader' class='legend-shade2'>থিম নির্ধারণ</h3>
+        <div style="position: relative;">
+            <div id='themeBody'>
+                <input type="radio" class="w3-radio" name="themeRadio" value="Default">
+                <span>Default</span><br>
+                <input type="radio" class="w3-radio" name="themeRadio" value="Chocolate">
+                <span>Chocolate</span><br>
+                <input type="radio" class="w3-radio" name="themeRadio" value="Plain">
+                <span>Binary</span><br>
+                <input type="radio" class="w3-radio" name="themeRadio" value="Teal">
+                <span>Teal</span><br>
+                <input type="radio" class="w3-radio" name="themeRadio" value="Orange">
+                <span>Orange</span><br>
+                <input type="radio" class="w3-radio" name="themeRadio" value="Night-Blue">
+                <span>Night-Blue</span><br>
+            </div>
+        </div>
+    </div>
+    <div id='IPSModal'>
+        <input type="text" id='IPSValue' placeholder="এই বইয়ে খুঁজুন">
+        <i id='SIPclose' class="material-icons">clear</i>
+        <i id='SIPsearch' class="material-icons">search</i>
+        <i id='SIPStop' class="material-icons">block</i>
+        <i id='SIPNext' class="material-icons">navigate_next</i>
+        <i id='SIPLast' class="material-icons">navigate_before</i>
+        <p style='text-align: center;width:100%;margin: 0;clear: both;color:white'>0/0</p>
+        <div id='IPSProgress'></div>
+    </div>
+    <div id='searchPage' class='bg-shade2'>
+        <div id="searchHead" class="legend-shade2">
+            <h3 id="srct">খোঁজ সাহায্য</h3>
+            <!--search title-->
+            <!-- <span id="closebtn2" style="float:right" onclick="closeNav('searchPage','left')">&times;</span> -->
+        </div>
+        <div id='srchToolBox' class="w3-container">
+            <div class="w3-center">
+                <input type="radio" class="w3-radio" name="searchType" checked value="whole_collection">
+                <span>সমগ্র ত্রিপিটক</span>
+                <input type="radio" class="w3-radio" name="searchType" value="one_book" style="margin-left:10px;">
+                <span>নির্দিষ্ট গ্রন্থ</span>
+            </div>
+            <br>
+
+            <div id="tripitak_search" class="w3-row w3-auto ">
+                <div class="w3-col s6">
+                    <input id='p1Check' class="w3-check" type="checkbox" checked>
+                    <label>বিনয়পিটক</label><br>
+                    <input id='p3Check' class="w3-check" type="checkbox" checked>
+                    <label>অভিধর্মপিটক</label><br>
+                </div>
+                <div class="w3-col s6">
+                    <input id='p2Check' class="w3-check" type="checkbox" checked>
+                    <label>সূত্রপিটক</label><br>
+                    <input id='p4Check' class="w3-check" type="checkbox" checked>
+                    <label>অন্যান্য বই</label><br>
+                </div>
+            </div>
+
+            <div id="specific_search" style="display:none;font-size:15pt">
+                <h3>গ্রন্থ নির্বাচন করুন</h3>
+                <select class="w3-select w3-border" id="pitak_selection" name="pitok">
+                    <option value="1" selected>বিনয়পিটক</option>
+                    <option value="2">সূত্রপিটক</option>
+                    <option value="3">অভিধর্মপিটক</option>
+                    <option value="4">অন্যান্য বই</option>
+                </select>
+                <select class="w3-select w3-border collection" id="pitok1" name="collection1" style="display:block;">
+                    <option value="1" selected>পারাজিকা</option>
+                    <option value="2">পাচিত্তিয়</option>
+                    <option value="3">ভিক্ষুণী-বিভঙ্গ</option>
+                    <option value="4">মহাবর্গ</option>
+                    <option value="5">চূলবর্গ</option>
+                    <option value="6">পরিবার</option>
+                </select>
+                <select class="w3-select collection" id="pitok2" name="collection2" style="display:none;">
+                    <option value="1" selected>শীলস্কন্ধবর্গ</option>
+                    <option value="2">মহাবর্গ</option>
+                    <option value="3">পাথিকবর্গ</option>
+                    <option value="4">মূল-পঞ্চাশ</option>
+                    <option value="5">মধ্যম-পঞ্চাশ</option>
+                    <option value="6">উপরি-পঞ্চাশ</option>
+                    <option value="7">সগাথা-বর্গ</option>
+                    <option value="8">নিদান-বর্গ</option>
+                    <option value="9">স্কন্ধ-বর্গ</option>
+                    <option value="10">ষড়ায়তন-বর্গ</option>
+                    <option value="11">মহাবর্গ</option>
+                    <option value="12">একক নিপাত</option>
+                    <option value="13">দ্বিক নিপাত</option>
+                    <option value="14">ত্রিক নিপাত </option>
+                    <option value="15"> চতুষ্ক নিপাত</option>
+                    <option value="16">পঞ্চক নিপাত </option>
+                    <option value="17">ষষ্ঠক নিপাত </option>
+                    <option value="18">সপ্তক নিপাত </option>
+                    <option value="19">অষ্টক নিপাত </option>
+                    <option value="20">নবক নিপাত </option>
+                    <option value="21">দশক নিপাত </option>
+                    <option value="22"> একাদশক নিপাত</option>
+                    <option value="23">খুদ্দকপাঠ</option>
+                    <option value="24">ধর্মপদ</option>
+                    <option value="25">উদান</option>
+                    <option value="26">ইতিবুত্তক</option>
+                    <option value="27">সুত্তনিপাত</option>
+                    <option value="28">বিমানকাহিনি</option>
+                    <option value="29">প্রেতকাহিনি</option>
+                    <option value="30">থেরগাথা</option>
+                    <option value="31">থেরীগাথা</option>
+                    <option value="32">অপদান (১ম খণ্ড)</option>
+                    <option value="33">অপদান (২য় খণ্ড)</option>
+                    <option value="34">বুদ্ধবংশ</option>
+                    <option value="35">চরিয়াপিটক</option>
+                    <option value="36">জাতক (১ম খণ্ড)</option>
+                    <option value="37">জাতক (২য় খণ্ড)</option>
+                    <option value="38">জাতক (৩য় খণ্ড)</option>
+                    <option value="39">জাতক (৪র্থ খণ্ড)</option>
+                    <option value="40">জাতক (৫ম খণ্ড)</option>
+                    <option value="41">জাতক (৬ষ্ঠ খণ্ড)</option>
+                    <option value="42">মহানির্দেশ</option>
+                    <option value="43">চূলনির্দেশ</option>
+                    <option value="44">প্রতিসম্ভিদামার্গ</option>
+                    <option value="45">মিলিন্দ-প্রশ্ন</option>
+                    <option value="46">নেত্তিপ্রকরণ</option>
+                    <option value="47">পিটকোপদেশ</option>
+                </select>
+                <select class="w3-select collection" id="pitok3" name="collection3" style="display:none;">
+                    <option value="1" selected>ধর্মসঙ্গণী</option>
+                    <option value="2">বিভঙ্গ</option>
+                    <option value="3">ধাতুকথা</option>
+                    <option value="4">পুদ্গল-প্রজ্ঞপ্তি</option>
+                    <option value="5">কথাবত্থু</option>
+                    <option value="6">যমক (১ম খণ্ড)</option>
+                    <option value="7">যমক (২য় খণ্ড)</option>
+                    <option value="8">যমক (৩য় খণ্ড)</option>
+                    <option value="9">পটঠান (১ম খণ্ড)</option>
+                    <option value="10">পটঠান (২য় খণ্ড)</option>
+                    <option value="11">পটঠান (৩য় খণ্ড)</option>
+                    <option value="12">পটঠান (৪র্থ খণ্ড)</option>
+                    <option value="13">পটঠান (৫ম খণ্ড)</option>
+                </select>
+                <select class="w3-select collection" id="pitok4" name="collection4" style="display:none;">
+                    <option value="1" selected>আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-১)</option>
+                    <option value="2">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-২)</option>
+                    <option value="3">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৩)</option>
+                    <option value="4">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৪)</option>
+                    <option value="5">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৫)</option>
+                    <option value="6">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৬)</option>
+                    <option value="7">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৭)</option>
+                    <option value="8">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৮)</option>
+                    <option value="9">আর্যশ্রাবক বনভন্তের ধর্মদেশনা (সিরিজ-৯)</option>
+                    <option value="10">শ্রাবকবুদ্ধ বনভন্তে</option>
+                    <option value="11">বিশুদ্ধিমার্গ</option>
+                    <option value="12">বিমুক্তিমার্গ</option>
+                    <option value="13">ধর্মপদ-অর্থকথা (সমগ্র)</option>
+                    <option value="14">বৌদ্ধ ভিক্ষু বিধি (১ম খণ্ড)</option>
+                    <option value="15">বৌদ্ধ ভিক্ষু বিধি (২য় খণ্ড)</option>
+                    <option value="16">জানা ও দেখা</option>
+                    <option value="17">হৃদয়ের দরজা খুলে দিন</option>
+                    <option value="18">কেবল ভালো হোন</option>
+                    <option value="19">একটি বন্য গাছ</option>
+                    <option value="20">পট্ঠানুদ্দেশ-দীপনী</option>
+                    <option value="21">ভালো? মন্দ? কে জানে?</option>
+                    <option value="22">মৃত্যুতে পুনর্জন্ম</option>
+                    <option value="23">কুশল প্রশ্নোত্তর</option>
+                    <option value="24">মহামানব গৌতম বুদ্ধ</option>
+                    <option value="25">পরিত্রাণ সূত্র পঞ্চাশক</option>
+                </select>
+            </div>
+            <br>
+            <input id='tptSrchVal' class="w3-input w3-border w3-animate-input" type="text" style="width:60%"
+                placeholder="যে-কোনো শব্দ লিখুন">
+            <br>
+            <div class="w3-center" style="margin-bottom:30px;">
+                <button id='searchButton' class=" legend-shade2 w3-btn w3-card-4" style="width:120px;"> খুঁজুন </button>
+            </div>
+        </div>
+        <div id='srchStats' class='w3-center '>
+            <button id='SPResearch' class="legend-shade2 w3-btn w3-card-4" style="width:120px;"> পুনরায় খুঁজুন </button>
+            <div id='searchProcess'>
+                <input type="button" id='SPstopSearch' class="w3-btn w3-card-4"
+                    style="color:#fff !important; background-color:#7f7f7f !important" value="খোঁজ বন্ধ করুন ">
+            </div>
+            <p></p>
+            <div id='SPProgress'></div>
+        </div>
+        <div id='srchContainer'>
+            <div id='tptSrchResults'>
+                <ul></ul>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="bkloader"></div>
+    <div id='tptCover'>
+        <img id='mainCover' src='img/topCover.png' class='w3-display-middle'>
+        <img id='coverLogo' src='img/logo.png'>
+        <!-- <p id="updateInfo">This Program Upgrade By Sīlavanta Bhikkhu</p> -->
+        <p style="display: none;" id="updateInfo">এই অ্যাপটি আপগ্রেড সংস্করণ</p>
+
+    </div>
+    <!-- <script type="text/javascript" src="cordova.js"></script>     -->
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

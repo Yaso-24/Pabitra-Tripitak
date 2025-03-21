@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">    
+    <meta name="description" content="Tripitaka">
+    <meta name="keywords" content="Tripitaka, buddha, bangla tripitaka">
+    <meta name="author" content="Joytu Khisha">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="0; url=p3/d1.html" /> -->
+    <!-- <link rel="stylesheet" href="iconfont/material-icons.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiperConfig.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/w3.css">    
+    <link rel="stylesheet" href="css/w3-colors-win8.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body >
+    
+    <!-- <script type="text/javascript" src="cordova.js"></script>     -->
+    <!-- <script type="text/javascript" src="js/swiper.min.js"></script>     -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        var dir='../p1/2.html'
+        var val='ভগবান';
+        var reg= RegExp(`${val}`,'gim');
+        $.get( dir, function( data ) {
+
+            while((result = reg.exec(data)) !== null) {
+                var start=result.index;               
+                var subreg=RegExp(`${val}| |<`,'gim');
+                console.log('inside '+val);
+                substr=data.slice(start+val.length,start+200);
+                while((subResult = subreg.exec(substr)) !== null){
+                    if(subResult[0]==' '){length=subResult.index}
+                    else if(subResult[0]=='<'){length=subResult.index-1}
+                    else if(subResult[0]==val){
+                        console.log('inside sub'+val);
+                    }
+                } 
+            }
+    });
+    </script>
+</body>
+</html>
+
+
